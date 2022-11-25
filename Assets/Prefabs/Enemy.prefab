@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3243582166148729583}
   - component: {fileID: 3259150321225917112}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: enemyRed5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 480419323846383764}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 795021121210666650}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &3259150321225917112
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c18253849f537e2498478ba0cc8b3071, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -94,7 +94,12 @@ GameObject:
   m_Component:
   - component: {fileID: 795021121210666650}
   - component: {fileID: 807454996}
-  m_Layer: 0
+  - component: {fileID: -4382086466490414856}
+  - component: {fileID: 1498900084510195327}
+  - component: {fileID: 2244855564249451856}
+  - component: {fileID: 6712308030089449549}
+  - component: {fileID: -415614802134153189}
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,4 +134,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a34696063d59dc40bc55a7765e3befa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: a2da5c72cd5a20d43ae7ac75ee371768, type: 2}
+--- !u!50 &-4382086466490414856
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026216886986826694}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!58 &1498900084510195327
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026216886986826694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.042031944}
+  serializedVersion: 2
+  m_Radius: 0.3258676
+--- !u!114 &2244855564249451856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026216886986826694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04044d80daf123e47a8d843241a3581c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  health: 20
+  score: 50
+  hitEffect: {fileID: 1375886591013026983, guid: d8d90b74a29a1f94a80a66f6feec4cac, type: 3}
+  applyCameraShake: 0
+--- !u!114 &6712308030089449549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026216886986826694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c017f6af7580cd946b163eca03c58b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
+--- !u!114 &-415614802134153189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6026216886986826694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f332ce4560b51f44a825c5d9dbb08ff0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 6836703326473857482, guid: b516b6b904112734099e1cb88365f263, type: 3}
+  projectileSpeed: 10
+  projectileLifeTime: 5
+  baseFiringRate: 1
+  useAI: 1
+  firingRateVariance: 0.5
+  minimumFiringRate: 0.1
+  isFiring: 0
